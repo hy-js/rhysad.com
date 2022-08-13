@@ -14,9 +14,22 @@ export default function Footer({}) {
           <a
             href='https://www.linkedin.com/in/hyjs/'
             rel='noopener noreferrer'
+            className='hover:text-red-300'
             target='_blank'>
             <p>Get in touch→</p>
           </a>
+          <p>
+            Made with{" "}
+            <span>
+              <a
+                href='https://remix.run/'
+                rel='noopener noreferrer'
+                className='hover:text-red-300'
+                target='_blank'>
+                Remix
+              </a>
+            </span>
+          </p>
           <p>
             Built with <span className='hover:text-red-300'>♥</span> in
             Australia
