@@ -28,6 +28,18 @@ export default function Nav({}) {
         <div className='container px-4 mx-auto flex flex-wrap items-center justify-between'>
           <div className='w-full  flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
             <div className='flex justify-center items-center'>
+              {/* <img
+                alt='Me'
+                className={classNames(
+                  scrollPosition > 10 ? "display" : "opacity-0",
+                  classNames(
+                    "rounded-full mx-2"
+                  )
+                )}
+                src='/profile.png'
+                width={25}
+                height={25}
+              /> */}
               <NavLink
                 to='/'
                 className='text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'>
@@ -93,7 +105,7 @@ export default function Nav({}) {
                   <span className='ml-2'>Blog</span>
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   className='h-6 w-6 mx-2'
@@ -107,7 +119,7 @@ export default function Nav({}) {
                     d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
                   />
                 </svg>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
