@@ -10,7 +10,6 @@ import {
 
 import type { MetaFunction } from "remix"
 import styles from "./tailwind.css"
-import remixImageStyles from "remix-image/remix-image.css"
 
 import Theme from "~/components/Theme"
 import Nav from "~/components/Nav"
@@ -19,7 +18,7 @@ import Footer from "~/components/Footer"
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: styles },
-    { rel: "stylesheet", href: remixImageStyles }
+
   ]
 }
 
@@ -50,7 +49,7 @@ export default function App() {
           <Nav />
 
           <div className='max-w-3xl mx-auto z-50'>
-            <main className='flex flex-col justify-center  px-4 sm:px-6 md:px-8 mt-8'>
+            <main className='flex flex-col justify-center px-4 sm:px-6 md:px-8 mt-8'>
               <Outlet />
             </main>
           </div>

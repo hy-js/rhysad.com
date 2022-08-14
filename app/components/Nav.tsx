@@ -22,7 +22,7 @@ export default function Nav({}) {
         className={classNames(
           scrollPosition > 10 ? "shadow " : "shadow-none",
           classNames(
-            "transition-shadow bg-orange-50 sticky top-0 flex flex-wrap items-center justify-between py-3"
+            "transition-shadow bg-orange-50 sticky top-0 flex flex-wrap items-center justify-between py-3 "
           )
         )}>
         <div className='container px-4 mx-auto flex flex-wrap items-center justify-between'>
