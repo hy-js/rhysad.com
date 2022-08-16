@@ -93,7 +93,7 @@ export default function Nav({}) {
                   }>
                   <span className='ml-2'>Projects</span>
                 </NavLink>
-              </li> */}
+              </li>
               <li className='nav-item'>
                 <NavLink
                   to='/blog'
@@ -104,7 +104,7 @@ export default function Nav({}) {
                   }>
                   <span className='ml-2'>Blog</span>
                 </NavLink>
-              </li>
+              </li> */}
               {/* <li>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'

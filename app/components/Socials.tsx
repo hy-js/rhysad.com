@@ -1,7 +1,7 @@
 export const Socials: React.FC = () => (
   <div className="flex mt-8">
     <a
-      href='https://LinkedIn/hy-js'
+      href='https://www.linkedin.com/in/rhysad/'
       target='none'
       className=' hover:text-orange-300'>
       <span className='sr-only'>LinkedIn</span>

@@ -14,13 +14,13 @@ export const loader: LoaderFunction = () => {
   ];
 };
 
-export default function ProjectIndex() {
-  const projects = useLoaderData();
+export default function BlogIndex() {
+  const posts = useLoaderData();
   return (
     <div className='h-screen'>
-      <h1>Articles</h1>
+      <h1>Blog Posts</h1>
       <ul>
-        {projects.map((post: any) => (
+        {posts.map((post: any) => (
           <li key={post.slug}>
             <Link to={post.slug}>{post.title}</Link>
             {post.description ? (

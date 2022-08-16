@@ -1,13 +1,12 @@
 export default function Footer({}) {
   return (
     <>
-      <footer className='pt-10 mt-8 flex justify-center gap-2 text-center text-sm print:hidden md:mt-20  bg-blue-300 bg-opacity-10'>
-
+      <footer className='pt-6 mt-4 flex justify-center gap-2 text-center text-sm print:hidden md:mt-20 '>
         <div>
-          <p>Want to work together?</p>
+          <p className="py-2">Let's work together!</p>
           <div className='flex justify-center'>
             <a
-              href='https://LinkedIn/hy-js'
+              href='https://www.linkedin.com/in/rhysad/'
               target='none'
               className='hover:text-orange-300'>
               <span className='sr-only'>LinkedIn</span>
@@ -37,7 +36,6 @@ export default function Footer({}) {
                 />
               </svg>
             </a>
-
             <a
               href='https://twitter.com/rhysad_dev'
               target='none'
@@ -52,8 +50,7 @@ export default function Footer({}) {
               </svg>
             </a>
           </div>
-
-          <p>
+          <p className="py-2 monospace">
             Made with{" "}
             <span>
               <a
@@ -61,13 +58,11 @@ export default function Footer({}) {
                 rel='noopener noreferrer'
                 className='hover:text-red-300'
                 target='_blank'>
-                Remix
+                Remix{" "}
               </a>
             </span>
-          </p>
-          <p>
-            Built with <span className='hover:text-red-300'>♥</span> in
-            Australia
+            and{" "}
+            <span className='hover:text-red-300'>♥</span> in Australia
           </p>
         </div>
       </footer>

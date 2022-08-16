@@ -1,5 +1,5 @@
 import { Link, LoaderFunction, useLoaderData } from "remix"
-import * as firstPost from "../routes/blog/"
+import * as firstPost from "../../todo/projects/blog"
 import * as secondPost from "../../app/routes/blog/tech.mdx"
 
 function postFromModule(mod: any) {

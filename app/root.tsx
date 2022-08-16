@@ -47,13 +47,12 @@ export default function App() {
           }
           className='h-100 bg-gradient-to-b from-orange-50'>
           <Nav />
-
-          <div className='max-w-3xl mx-auto z-50'>
-            <main className='flex flex-col justify-center px-4 sm:px-6 md:px-8 mt-8'>
+          <div className='max-w-3xl mx-auto z-50 '>
+            <main className='flex flex-col justify-center px-4 sm:px-6 md:px-8 mt-8 h-100'>
               <Outlet />
             </main>
           </div>
-          <div style={{ background: color2 }}>
+          <div style={{ background: color }}>
             <Footer />
           </div>
         </div>
