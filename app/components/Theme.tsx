@@ -12,7 +12,7 @@ const Theme = () => {
       let lightness = 87.5
 
       setColor(`hsl(${hue},${saturation}%,${lightness}%)`)
-      setColor2(`hsl(${hue - 60},${saturation}%,${lightness}%)`)
+      setColor2(`hsl(${hue},${saturation - 30}%,${lightness}%)`)
     }
     generateHslColors()
   }, [reload])

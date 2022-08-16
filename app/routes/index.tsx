@@ -67,7 +67,7 @@ export default function About() {
             ? projects.map((project: any) => (
                 <div
                   key={project.id}
-                  className='border border-gray-500 my-4 bg-blue-50'>
+                  className='card border border-gray-500 my-4'>
                   <a href={project.html_url} target='none'>
                     <div className='flex bg-black text-white'>
                       <span className='sr-only'>GitHub</span>
@@ -87,9 +87,11 @@ export default function About() {
                   </a>
                   <div className=' p-2 flex items-center justify-between'>
                     <div>
-                      <h4 className=' capitalize text-xl tracking-tight sm:text-2xl'>
-                        {project.name}
-                      </h4>
+                      <a href={project.homepage || project.html_url} target='none'>
+                        <h4 className=' capitalize text-xl tracking-tight sm:text-2xl'>
+                          {project.name}
+                        </h4>{" "}
+                      </a>
                       <p>{moment(project.pushed_at).fromNow()}</p>
                     </div>
                     <button
@@ -100,11 +102,6 @@ export default function About() {
                   </div>
                   <div className='prose lg:prose-xl mx-2'>
                     <p className='body-text'>{project.description}</p>
-                    {project.homepage.length > 0 && (
-                      <a href={project.homepage} target='none'>
-                        Live Demo
-                      </a>
-                    )}
                   </div>
                 </div>
               ))

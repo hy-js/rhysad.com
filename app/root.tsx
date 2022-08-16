@@ -16,10 +16,7 @@ import Nav from "~/components/Nav"
 import Footer from "~/components/Footer"
 
 export const links: LinksFunction = () => {
-  return [
-    { rel: "stylesheet", href: styles },
-
-  ]
+  return [{ rel: "stylesheet", href: styles }]
 }
 
 export const meta: MetaFunction = () => {
@@ -28,6 +25,14 @@ export const meta: MetaFunction = () => {
 
 export default function App() {
   const { color, color2, reload, setReload } = Theme()
+const css = `
+    h1 {
+      color: ${color};
+    }
+    .card {
+        background-color: ${color2};
+    }
+`
   return (
     <html lang='en'>
       <head>
@@ -60,6 +65,7 @@ export default function App() {
         <ScrollRestoration />
         {process.env.NODE_ENV === "development" && <LiveReload />}
       </body>
+      <style>{css}</style>
     </html>
   )
 }
