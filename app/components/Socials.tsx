@@ -3,7 +3,7 @@ export const Socials: React.FC = () => (
     <a
       href='https://www.linkedin.com/in/rhysad/'
       target='none'
-      className=' hover:text-orange-300'>
+      className=' hover:text-orange-300 '>
       <span className='sr-only'>LinkedIn</span>
       <svg
         xmlns='http://www.w3.org/2000/svg'

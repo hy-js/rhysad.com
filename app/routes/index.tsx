@@ -29,7 +29,8 @@ export default function About() {
         />
         <div className='flex flex-col justify-center '>
           <h1 className='text-5xl font-extrabold  tracking-tight sm:text-8xl '>
-            Hy, I'm Rhys Dawson 👋
+            Hy, I'm Rhys Dawson
+            👋
           </h1>
           <h2 className='text-2xl tracking-tight sm:text-5xl'>
             JS developer & instructor
@@ -39,7 +40,7 @@ export default function About() {
       </header>
 
       <section className='mb-4'>
-        <div className=' prose lg:prose-xl mb-4'>
+        <div className=' prose lg:prose-xl mb-4 dark:text-gray-200 '>
           <p className='body-text mt-8 '>
             I'm a junior software engineer specialising in single page
             applications and previously worked as a full-stack bootcamp
@@ -57,17 +58,70 @@ export default function About() {
           </p>
         </div>
       </section>
+
       <hr />
-      <section>
-        <div className='prose lg:prose-xl mb-4'>
-          <h2 className='text-xl t sm:text-4xl'>Working on:</h2>
+
+      <section className="mb-8">
+        <div className='prose lg:prose-xl mb-4 '>
+          <h2 className='text-xl t sm:text-4xl dark:text-gray-200'>Working with:</h2>
+        </div>
+        <div className='flex flex-wrap gap-2 '>
+          <button
+            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
+            type='button'>
+            TypeScript
+          </button>
+          <button
+            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
+            type='button'>
+            NextJS
+          </button>
+          <button
+            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
+            type='button'>
+            Remix
+          </button>
+          <button
+            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
+            type='button'>
+            Svelte
+          </button>
+          <button
+            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
+            type='button'>
+            MongoDB
+          </button>
+          <button
+            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
+            type='button'>
+            PostgresSQL
+          </button>
+          <button
+            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
+            type='button'>
+            Prisma
+          </button>
+          <button
+            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
+            type='button'>
+            TailwindCSS
+          </button>
+        </div>
+      </section>
+
+      <hr />
+
+
+      <section className="mb-8">
+        <div className='prose lg:prose-xl mb-4 '>
+          <h2 className='text-xl t sm:text-4xl dark:text-gray-200'>Working on:</h2>
         </div>
         <div>
           {projects.length > 0
             ? projects.map((project: any) => (
                 <div
                   key={project.id}
-                  className='card border border-gray-500 my-4'>
+                  className='card border border-gray-500 my-4 dark:text-gray-200'>
                   <a href={project.html_url} target='none'>
                     <div className='flex bg-black text-white'>
                       <span className='sr-only'>GitHub</span>
@@ -109,53 +163,7 @@ export default function About() {
         </div>
       </section>
       <hr />
-      <section>
-        <div className='prose lg:prose-xl mb-4'>
-          <h2 className='text-xl t sm:text-4xl'>Working with:</h2>
-        </div>
-        <div className='flex flex-wrap gap-2 '>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white'
-            type='button'>
-            TypeScript
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white'
-            type='button'>
-            NextJS
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white'
-            type='button'>
-            Remix
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white'
-            type='button'>
-            Svelte
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white'
-            type='button'>
-            MongoDB
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white'
-            type='button'>
-            PostgresSQL
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white'
-            type='button'>
-            Prisma
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white'
-            type='button'>
-            TailwindCSS
-          </button>
-        </div>
-      </section>
+
     </>
   )
 }

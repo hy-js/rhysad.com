@@ -26,9 +26,6 @@ export const meta: MetaFunction = () => {
 export default function App() {
   const { color, color2, reload, setReload } = Theme()
 const css = `
-    h1 {
-      color: ${color};
-    }
     .card {
         background-color: ${color2};
     }
@@ -50,10 +47,10 @@ const css = `
               // background: `linear-gradient(to bottom,  ${color} 0%,${color2} 100%)`
             }
           }
-          className='h-100 bg-gradient-to-b from-orange-50'>
+          className='h-100 bg-gradient-to-b from-orange-50 dark:from-slate-700 dark:to-slate-500 dark:text-gray-200'>
           <Nav />
-          <div className='max-w-3xl mx-auto z-50 '>
-            <main className='flex flex-col justify-center px-4 sm:px-6 md:px-8 mt-8 h-100'>
+          <div className='max-w-3xl mx-auto animate-fade-in-up'>
+            <main className='flex flex-col justify-center px-4 sm:px-6 md:px-8 mt-8 h-100 '>
               <Outlet />
             </main>
           </div>
