@@ -3,7 +3,7 @@ export const Socials: React.FC = () => (
     <a
       href='https://www.linkedin.com/in/rhysad/'
       target='none'
-      className=' hover:text-orange-300 '>
+      className=' hov'>
       <span className='sr-only'>LinkedIn</span>
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -17,7 +17,7 @@ export const Socials: React.FC = () => (
     <a
       href='https://github.com/hy-js'
       target='none'
-      className=' hover:text-orange-300'>
+      className=' hov'>
       <span className='sr-only'>GitHub</span>
       <svg
         className='h-10 w-10 mx-2'
@@ -34,7 +34,7 @@ export const Socials: React.FC = () => (
     <a
       href='https://twitter.com/rhysad_dev'
       target='none'
-      className='hover:text-orange-300'>
+      className='hov'>
       <span className='sr-only'>Twitter</span>
       <svg
         className='h-10 w-10 mx-2'

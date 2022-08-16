@@ -21,23 +21,21 @@ export default function Nav({}) {
         className={classNames(
           scrollPosition > 10 ? "shadow " : "shadow-none",
           classNames(
-            "z-50 transition-shadow bg-orange-50 sticky top-0 flex flex-wrap items-center justify-between py-3 dark:bg-slate-700  dark:text-gray-200 "
+            "z-50 transition-shadow bg-orange-50 sticky top-0 flex flex-wrap items-center justify-between py-3 dark:bg-zinc-600  dark:text-gray-200 "
           )
         )}>
-        <div className='container px-4 mx-auto flex flex-wrap items-center justify-between '>
-          <div className='  flex justify-between w-auto static'>
+        <div className='container mx-auto flex flex-wrap items-center justify-between '>
+          <div className='flex justify-between w-auto static'>
             <div className='flex justify-center items-center'>
               <NavLink
                 to='/'
                 className='text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'>
                 <span className='visible sm:invisible'>hy-js</span>
-                <span className='invisible sm:visible'>
-                  Rhys Dawson
-                </span>
+                <span className='invisible sm:visible'>Rhys Dawson</span>
               </NavLink>
             </div>
           </div>
-          <div className='flex flex-grow' id='example-navbar-danger'>
+          {/* <div className='flex flex-grow' id='example-navbar-danger'>
             <ul className='flex  flex-row  list-none ml-auto items-center '>
               <li className='nav-item'>
                 <NavLink
@@ -47,18 +45,18 @@ export default function Nav({}) {
                       ? "py-2 flex items-center  text-xs uppercase font-bold leading-snug  hover:opacity-75 "
                       : " py-2 flex items-center  text-xs uppercase  leading-snug  hover:opacity-75 "
                   }>
-                  <span>About</span>
+                  <span>Now</span>
                 </NavLink>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </nav>
       <aside
         className={classNames(
           scrollPosition < 100 ? "hidden" : "display",
           classNames(
-            "transition-all bottom-0 fixed right-0 bg-white cursor-pointer p-1 rounded-full m-4 border border-gray-500"
+            "transition-all bottom-0 fixed right-0 bg-white dark:bg-gray-800 dark:text-white cursor-pointer p-1 rounded-full m-4  "
           )
         )}>
         <a onClick={scrollToTop} rel='noopener noreferrer' target='_blank'>

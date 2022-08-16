@@ -8,7 +8,7 @@ export default function Footer({}) {
             <a
               href='https://www.linkedin.com/in/rhysad/'
               target='none'
-              className='hover:text-orange-300'>
+              className='hover:text-white'>
               <span className='sr-only'>LinkedIn</span>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -22,7 +22,7 @@ export default function Footer({}) {
             <a
               href='https://github.com/hy-js'
               target='none'
-              className=' hover:text-orange-300'>
+              className=' hover:text-white'>
               <span className='sr-only'>GitHub</span>
               <svg
                 className='h-5 w-5 mx-1'
@@ -39,7 +39,7 @@ export default function Footer({}) {
             <a
               href='https://twitter.com/rhysad_dev'
               target='none'
-              className='hover:text-orange-300'>
+              className='hover:text-white'>
               <span className='sr-only'>Twitter</span>
               <svg
                 className='h-5 w-5 mx-1'
@@ -56,13 +56,13 @@ export default function Footer({}) {
               <a
                 href='https://remix.run/'
                 rel='noopener noreferrer'
-                className='hover:text-red-300'
+                className='hover:text-white'
                 target='_blank'>
                 Remix{" "}
               </a>
             </span>
             and{" "}
-            <span className='hover:text-red-300'>♥</span> in Australia
+            <span className='hover:text-red-600'>♥</span> in Australia
           </p>
         </div>
       </footer>

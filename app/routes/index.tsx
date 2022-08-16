@@ -17,6 +17,7 @@ export async function loader() {
 
 export default function About() {
   const projects = useLoaderData()
+  const techs = ["TypeScript", "NextJS", "Remix", "Node", "Express", "Svelte","MongoDB", "Postgres", "Prisma", "Tailwind"]
   return (
     <>
       <header className='mb-4'>
@@ -28,11 +29,11 @@ export default function About() {
           height={150}
         />
         <div className='flex flex-col justify-center '>
-          <h1 className='text-5xl font-extrabold  tracking-tight sm:text-8xl '>
+          <h1 className='text-5xl font-extrabold tracking-tight sm:text-8xl '>
             Hy, I'm Rhys Dawson
-            👋
+            <span className='text-7xl'>👋</span>
           </h1>
-          <h2 className='text-2xl tracking-tight sm:text-5xl'>
+          <h2 className='text-2xl tracking-tight sm:text-5xl accent'>
             JS developer & instructor
           </h2>
         </div>
@@ -41,80 +42,46 @@ export default function About() {
 
       <section className='mb-4'>
         <div className=' prose lg:prose-xl mb-4 dark:text-gray-200 '>
-          <p className='body-text mt-8 '>
-            I'm a junior software engineer specialising in single page
-            applications and previously worked as a full-stack bootcamp
-            instructor.
+          <p className='body-text mt-8'>
+            I'm a junior web developer specialising in single page applications
+            currently working as a full-stack bootcamp instructor.
           </p>
           <p className='body-text'>
             I'm passionate about exploring language, aesthetics, and logic in
-            everyday and innovative web applications that positively impact
-            users.
+            everyday and innovative web applications that keep the web fun.
           </p>
           <p className='body-text mt-8 '>
-            I'm looking to work with a team on a project that I'm passionate
-            about and I'm always looking to learn more. Feel free to get in
-            touch!
+            I'm looking to work with a team on an exciting project and I'm
+            always looking to learn more. Feel free to get in touch!
           </p>
         </div>
       </section>
 
-      <hr />
 
-      <section className="mb-8">
+      <section className='mb-8'>
         <div className='prose lg:prose-xl mb-4 '>
-          <h2 className='text-xl t sm:text-4xl dark:text-gray-200'>Working with:</h2>
+          <h2 className='text-xl t sm:text-4xl dark:text-gray-200'>
+            Working with:
+          </h2>
         </div>
         <div className='flex flex-wrap gap-2 '>
+          {techs.map((tech, i) => (
           <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
+            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800 dark:border-gray-6800'
+            key={i}
             type='button'>
-            TypeScript
+            {tech}
           </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
-            type='button'>
-            NextJS
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
-            type='button'>
-            Remix
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
-            type='button'>
-            Svelte
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
-            type='button'>
-            MongoDB
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
-            type='button'>
-            PostgresSQL
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
-            type='button'>
-            Prisma
-          </button>
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800'
-            type='button'>
-            TailwindCSS
-          </button>
+          ))}
         </div>
       </section>
 
-      <hr />
 
-
-      <section className="mb-8">
+      <section className='mb-8'>
         <div className='prose lg:prose-xl mb-4 '>
-          <h2 className='text-xl t sm:text-4xl dark:text-gray-200'>Working on:</h2>
+          <h2 className='text-xl t sm:text-4xl dark:text-gray-200'>
+            Working on:
+          </h2>
         </div>
         <div>
           {projects.length > 0
@@ -141,15 +108,17 @@ export default function About() {
                   </a>
                   <div className=' p-2 flex items-center justify-between'>
                     <div>
-                      <a href={project.homepage || project.html_url} target='none'>
-                        <h4 className=' capitalize text-xl tracking-tight sm:text-2xl'>
+                      <a
+                        href={project.homepage || project.html_url}
+                        target='none'>
+                        <h4 className=' capitalize text-xl tracking-tight sm:text-2xl text-black'>
                           {project.name}
                         </h4>{" "}
                       </a>
-                      <p>{moment(project.pushed_at).fromNow()}</p>
+                      <p className="text-black">{moment(project.pushed_at).fromNow()}</p>
                     </div>
                     <button
-                      className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white'
+                      className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white text-black'
                       type='button'>
                       {project.language}
                     </button>
@@ -163,7 +132,6 @@ export default function About() {
         </div>
       </section>
       <hr />
-
     </>
   )
 }
