@@ -1,23 +1,34 @@
-import { Socials } from "~/components/Socials"
-import moment from "moment"
-import { json } from "@remix-run/node" // or cloudflare/deno
-import { useLoaderData } from "@remix-run/react"
-import { Link } from "@remix-run/react"
+import { Socials } from '~/components/Socials';
+import moment from 'moment';
+import { json } from '@remix-run/node'; // or cloudflare/deno
+import { useLoaderData } from '@remix-run/react';
+import { Link } from '@remix-run/react';
 export async function loader() {
   const res = await fetch(
-    "https://api.github.com/users/hy-js/repos?sort=pushed&per_page=2&direction=desc",
+    'https://api.github.com/users/hy-js/repos?sort=pushed&per_page=2&direction=desc',
     {
       headers: {
         authorization: `${process.env.GITHUB_TOKEN}`
       }
     }
-  )
-  return json(await res.json())
+  );
+  return json(await res.json());
 }
 
 export default function About() {
-  const projects = useLoaderData()
-  const techs = ["TypeScript", "NextJS", "Remix", "Node", "Express", "Svelte","MongoDB", "Postgres", "Prisma", "Tailwind"]
+  const projects = useLoaderData();
+  const techs = [
+    'TypeScript',
+    'NextJS',
+    'Remix',
+    'Node',
+    'Express',
+    'Svelte',
+    'MongoDB',
+    'Postgres',
+    'Prisma',
+    'Tailwind'
+  ];
   return (
     <>
       <header className='mb-4'>
@@ -57,7 +68,6 @@ export default function About() {
         </div>
       </section>
 
-
       <section className='mb-8'>
         <div className='prose lg:prose-xl mb-4 '>
           <h2 className='text-xl t sm:text-4xl dark:text-gray-200'>
@@ -66,16 +76,15 @@ export default function About() {
         </div>
         <div className='flex flex-wrap gap-2 '>
           {techs.map((tech, i) => (
-          <button
-            className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white dark:bg-gray-800 dark:border-gray-6800'
-            key={i}
-            type='button'>
-            {tech}
-          </button>
+            <button
+              className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white text-black'
+              key={i}
+              type='button'>
+              {tech}
+            </button>
           ))}
         </div>
       </section>
-
 
       <section className='mb-8'>
         <div className='prose lg:prose-xl mb-4 '>
@@ -113,9 +122,11 @@ export default function About() {
                         target='none'>
                         <h4 className=' capitalize text-xl tracking-tight sm:text-2xl text-black'>
                           {project.name}
-                        </h4>{" "}
+                        </h4>{' '}
                       </a>
-                      <p className="text-black">{moment(project.pushed_at).fromNow()}</p>
+                      <p className='text-black'>
+                        {moment(project.pushed_at).fromNow()}
+                      </p>
                     </div>
                     <button
                       className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white text-black'
@@ -133,5 +144,6 @@ export default function About() {
       </section>
       <hr />
     </>
-  )
+  );
 }
+
