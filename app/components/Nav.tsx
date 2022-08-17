@@ -1,27 +1,27 @@
-import { useState } from "react"
-import { NavLink } from "remix"
-import useScrollPosition from "~/hooks/useScrollPosition"
+import { useState } from 'react';
+import { NavLink } from 'remix';
+import useScrollPosition from '~/hooks/useScrollPosition';
 
 function classNames(...classes: Array<string>) {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(' ');
 }
 
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
-  })
-}
+    behavior: 'smooth'
+  });
+};
 export default function Nav({}) {
-  const scrollPosition = useScrollPosition()
+  const scrollPosition = useScrollPosition();
 
   return (
     <>
       <nav
         className={classNames(
-          scrollPosition > 10 ? "shadow " : "shadow-none",
+          scrollPosition > 10 ? 'shadow ' : 'shadow-none',
           classNames(
-            "z-50 transition-shadow bg-orange-50 sticky top-0 flex flex-wrap items-center justify-between py-3 dark:bg-zinc-600  dark:text-gray-200 "
+            'z-50 transition-shadow bg-orange-50 sticky top-0 flex flex-wrap items-center justify-between py-3 dark:bg-zinc-600  dark:text-gray-200 '
           )
         )}>
         <div className='container mx-auto flex flex-wrap items-center justify-between '>
@@ -29,7 +29,7 @@ export default function Nav({}) {
             <div className='flex justify-center items-center'>
               <NavLink
                 to='/'
-                className='text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'>
+                className='text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase mx-2'>
                 <span className='visible sm:invisible'>hy-js</span>
                 <span className='invisible sm:visible'>Rhys Dawson</span>
               </NavLink>
@@ -54,9 +54,9 @@ export default function Nav({}) {
       </nav>
       <aside
         className={classNames(
-          scrollPosition < 100 ? "hidden" : "display",
+          scrollPosition < 100 ? 'hidden' : 'display',
           classNames(
-            "transition-all bottom-0 fixed right-0 bg-white dark:bg-gray-800 dark:text-white cursor-pointer p-1 rounded-full m-4  "
+            'transition-all bottom-0 fixed right-0 bg-white dark:bg-gray-800 dark:text-white cursor-pointer p-1 rounded-full m-4  '
           )
         )}>
         <a onClick={scrollToTop} rel='noopener noreferrer' target='_blank'>
@@ -76,5 +76,6 @@ export default function Nav({}) {
         </a>
       </aside>
     </>
-  )
+  );
 }
+

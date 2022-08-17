@@ -6,36 +6,36 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration
-} from "remix"
+} from 'remix';
 
-import type { MetaFunction } from "remix"
-import styles from "./tailwind.css"
+import type { MetaFunction } from 'remix';
+import styles from './tailwind.css';
 
-import Accent from "~/components/Accent"
-import Nav from "~/components/Nav"
-import Footer from "~/components/Footer"
+import Accent from '~/components/Accent';
+import Nav from '~/components/Nav';
+import Footer from '~/components/Footer';
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: styles }]
-}
+  return [{ rel: 'stylesheet', href: styles }];
+};
 
 export const meta: MetaFunction = () => {
-  return { title: "Rhys A. D. - Developer" }
-}
+  return { title: 'Rhys A. D. - Developer' };
+};
 
 export default function App() {
-  const { color, color2 } = Accent()
+  const { color, color2 } = Accent();
   const css = `
     .card {
-        background-color: ${color2};
+        background-color: ${color};
     }
     .accent {
-      color: ${color2};
+      color: ${color};
     }
     .hov:hover {
-        color: ${color2};
+        color: ${color};
     }
-`
+`;
   return (
     <html lang='en'>
       <head>
@@ -66,9 +66,10 @@ export default function App() {
         </div>
         <Scripts />
         <ScrollRestoration />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
+        {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
       <style>{css}</style>
     </html>
-  )
+  );
 }
+
