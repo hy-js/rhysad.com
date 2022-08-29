@@ -21,7 +21,7 @@ export default function Nav({}) {
         className={classNames(
           scrollPosition > 10 ? 'shadow ' : 'shadow-none',
           classNames(
-            'z-50 transition-shadow bg-orange-50 sticky top-0 flex flex-wrap items-center justify-between py-3 dark:bg-zinc-600  dark:text-gray-200 '
+            'z-50 transition-shadow bg-orange-50 sticky top-0 flex flex-wrap items-center justify-between py-3'
           )
         )}>
         <div className='container mx-auto flex flex-wrap items-center justify-between '>
@@ -56,7 +56,7 @@ export default function Nav({}) {
         className={classNames(
           scrollPosition < 100 ? 'hidden' : 'display',
           classNames(
-            'transition-all bottom-0 fixed right-0 bg-white dark:bg-gray-800 dark:text-white cursor-pointer p-1 rounded-full m-4  '
+            'transition-all bottom-0 fixed right-0 bg-white  cursor-pointer p-1 rounded-full m-4  '
           )
         )}>
         <a onClick={scrollToTop} rel='noopener noreferrer' target='_blank'>

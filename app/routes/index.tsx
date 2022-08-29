@@ -52,7 +52,7 @@ export default function About() {
       </header>
 
       <section className='mb-4'>
-        <div className=' prose lg:prose-xl mb-4 dark:text-gray-200 '>
+        <div className=' prose lg:prose-xl mb-4'>
           <p className='body-text mt-8'>
             I'm a junior web developer specialising in single page applications
             currently working as a full-stack bootcamp instructor.
@@ -70,7 +70,7 @@ export default function About() {
 
       <section className='mb-8'>
         <div className='prose lg:prose-xl mb-4 '>
-          <h2 className='text-xl t sm:text-4xl dark:text-gray-200'>
+          <h2 className='text-xl t sm:text-4xl '>
             Working with:
           </h2>
         </div>
@@ -88,7 +88,7 @@ export default function About() {
 
       <section className='mb-8'>
         <div className='prose lg:prose-xl mb-4 '>
-          <h2 className='text-xl t sm:text-4xl dark:text-gray-200'>
+          <h2 className='text-xl t sm:text-4xl'>
             Working on:
           </h2>
         </div>
@@ -97,7 +97,7 @@ export default function About() {
             ? projects.map((project: any) => (
                 <div
                   key={project.id}
-                  className='card border border-gray-500 my-4 dark:text-gray-200'>
+                  className='card border border-gray-500 my-4 '>
                   <a href={project.html_url} target='none'>
                     <div className='flex bg-black text-white'>
                       <span className='sr-only'>GitHub</span>

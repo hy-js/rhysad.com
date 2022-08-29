@@ -53,7 +53,7 @@ export default function App() {
               // background: `linear-gradient(to bottom,  ${color} 0%,${color2} 100%)`
             }
           }
-          className='h-100 bg-gradient-to-b from-orange-50 dark:from-zinc-600 dark:to-zinc-800 dark:text-gray-200'>
+          className='h-100 bg-gradient-to-b from-orange-50'>
           <Nav />
           <div className='max-w-3xl mx-auto animate-fade-in-up'>
             <main className='flex flex-col justify-center px-4 sm:px-6 md:px-8 mt-8 h-100 '>
