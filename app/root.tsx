@@ -24,7 +24,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function App() {
-  const { color, color2 } = Accent();
+  const { color } = Accent()
   const css = `
     .card {
         background-color: ${color};
@@ -60,9 +60,8 @@ export default function App() {
               <Outlet />
             </main>
           </div>
-          <div style={{ background: color }}>
-            <Footer />
-          </div>
+
+          <Footer />
         </div>
         <Scripts />
         <ScrollRestoration />

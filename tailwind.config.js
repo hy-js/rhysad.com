@@ -1,6 +1,6 @@
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
-  darkMode: "media",
+  darkMode: "false",
   theme: {
     extend: {
       keyframes: {

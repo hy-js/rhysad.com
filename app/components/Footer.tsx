@@ -1,7 +1,7 @@
 export default function Footer({}) {
   return (
     <>
-      <footer className='pt-6 mt-4 flex justify-center gap-2 text-center text-sm print:hidden md:mt-20 dark:text-gray-800'>
+      <footer className='pt-6 mt-4 flex justify-center gap-2 text-center text-sm print:hidden md:mt-20 dark:text-gray-800 bg-neutral-200'>
         <div>
           <p className="py-2">Let's work together!</p>
           <div className='flex justify-center'>
