@@ -1,14 +1,14 @@
 export default function Footer({}) {
   return (
     <>
-      <footer className='pt-6 mt-4 flex justify-center gap-2 text-center text-sm print:hidden md:mt-20  bg-neutral-200'>
+      <footer className='pt-6 mt-4 flex justify-center gap-2 text-center text-sm print:hidden md:mt-20  bg-[#f6f6f6] border-t'>
         <div>
           <p className="py-2">Let's work together!</p>
           <div className='flex justify-center'>
             <a
               href='https://www.linkedin.com/in/rhysad/'
               target='none'
-              className='hover:text-white'>
+              className='hov'>
               <span className='sr-only'>LinkedIn</span>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -22,7 +22,7 @@ export default function Footer({}) {
             <a
               href='https://github.com/hy-js'
               target='none'
-              className=' hover:text-white'>
+              className=' hov'>
               <span className='sr-only'>GitHub</span>
               <svg
                 className='h-5 w-5 mx-1'
@@ -39,7 +39,7 @@ export default function Footer({}) {
             <a
               href='https://twitter.com/rhysad_dev'
               target='none'
-              className='hover:text-white'>
+              className='hov'>
               <span className='sr-only'>Twitter</span>
               <svg
                 className='h-5 w-5 mx-1'
@@ -56,7 +56,7 @@ export default function Footer({}) {
               <a
                 href='https://remix.run/'
                 rel='noopener noreferrer'
-                className='hover:text-white'
+                className='hov'
                 target='_blank'>
                 Remix{" "}
               </a>

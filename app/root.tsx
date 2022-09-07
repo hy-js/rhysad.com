@@ -6,22 +6,22 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration
-} from 'remix';
+} from "remix"
 
-import type { MetaFunction } from 'remix';
-import styles from './tailwind.css';
+import type { MetaFunction } from "remix"
+import styles from "./tailwind.css"
 
-import Accent from '~/components/Accent';
-import Nav from '~/components/Nav';
-import Footer from '~/components/Footer';
+import Accent from "~/components/Accent"
+import Nav from "~/components/Nav"
+import Footer from "~/components/Footer"
 
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: styles }];
-};
+  return [{ rel: "stylesheet", href: styles }]
+}
 
 export const meta: MetaFunction = () => {
-  return { title: 'Rhys A. D. - Developer' };
-};
+  return { title: "Rhys A. D. - Developer" }
+}
 
 export default function App() {
   const { color } = Accent()
@@ -35,7 +35,7 @@ export default function App() {
     .hov:hover {
         color: ${color};
     }
-`;
+`
   return (
     <html lang='en'>
       <head>
@@ -44,18 +44,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
-        <div
-          style={
-            {
-              // background: "linear-gradient(#e66465, #9198e5);"
-              // background: "linear-gradient(cfefdc, #9198e5);"
-              // background: `linear-gradient(to bottom,  ${color} 0%,${color2} 100%)`
-            }
-          }
-          className='h-100 bg-gradient-to-b from-orange-50'>
-          <Nav />
-          <div className='max-w-3xl mx-auto animate-fade-in-up'>
+      <body className='h-100 bg-orange-50'>
+        <div>
+          <div className='max-w-3xl mx-auto animate-fade-in-up h-100 bg-orange-50'>
             <main className='flex flex-col justify-center px-4 sm:px-6 md:px-8 mt-8 h-100 '>
               <Outlet />
             </main>
@@ -65,10 +56,9 @@ export default function App() {
         </div>
         <Scripts />
         <ScrollRestoration />
-        {process.env.NODE_ENV === 'development' && <LiveReload />}
+        {process.env.NODE_ENV === "development" && <LiveReload />}
       </body>
       <style>{css}</style>
     </html>
-  );
+  )
 }
-

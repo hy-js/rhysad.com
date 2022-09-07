@@ -19,6 +19,7 @@ export default function About() {
   const projects = useLoaderData();
   const techs = [
     'TypeScript',
+    'JavaScript',
     'NextJS',
     'Remix',
     'Node',
@@ -120,7 +121,7 @@ export default function About() {
                       <a
                         href={project.homepage || project.html_url}
                         target='none'>
-                        <h4 className=' capitalize text-xl tracking-tight sm:text-2xl text-black'>
+                        <h4 className='text-xl tracking-tight sm:text-2xl text-black'>
                           {project.name}
                         </h4>{' '}
                       </a>
