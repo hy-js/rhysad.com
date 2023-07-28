@@ -55,25 +55,20 @@ export default function About() {
 
   return (
     <>
-      <header className='mb-4'>
+      <header className='mb-4 '>
         <div className=' flex items-center justify-between'>
-          <div className='flex '>
-            <h1 className='text-5xl italic'>Rhys Dawson</h1>
+          <div className='flex items-center'>
+            <h1 className='text-5xl italic font-vollkorn'>Rhys Dawson</h1>
             <img
               alt='Me'
-              className='rounded-full '
+              className='rounded-full w-12 h-12 ml-2'
               src='/profile.png'
-              width={50}
-              height={50}
             />
           </div>
           <Socials />
         </div>
         <h2 className=''>Web Developer</h2>
-      </header>
-
-      <section className='mb-8'>
-        <div className='flex flex-wrap gap-2 '>
+        <div className='flex flex-wrap gap-2 mt-2 mb-2'>
           {techs.map((tech, i) => (
             <button
               className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white text-black'
@@ -83,9 +78,9 @@ export default function About() {
             </button>
           ))}
         </div>
-      </section>
+      </header>
 
-      <section className='mb-8'>
+      <section className='mb-4'>
         <div>
           {latestProjects.length > 0
             ? latestProjects.map((project: any) => (
@@ -140,7 +135,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className='mb-8'>
+      <section className='mb-4'>
         {/* <h2 className='text-4xl mb-4'>Previous Work</h2> */}
         <div>
           {projects.length > 0

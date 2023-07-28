@@ -1,3 +1,5 @@
+import { Socials } from "~/components/Socials"
+
 export default function Footer({}) {
   return (
     <>
@@ -62,7 +64,7 @@ export default function Footer({}) {
               </a>
             </span>
             and{" "}
-            <span className='hover:text-red-600'>♥</span> in Australia
+            <span className='hover:text-red-600'>♥</span> in Melbourne
           </p>
         </div>
       </footer>
