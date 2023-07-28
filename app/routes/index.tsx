@@ -90,7 +90,7 @@ export default function About() {
           {latestProjects.length > 0
             ? latestProjects.map((project: any) => (
                 <>
-                  <h2 className='text-4xl'>Latest Work</h2>
+                  {/* <h2 className='text-4xl'>Latest Work</h2> */}
                   <div
                     key={project.id}
                     className='card border-2 border-black my-4 '>
@@ -141,7 +141,7 @@ export default function About() {
       </section>
 
       <section className='mb-8'>
-        <h2 className='text-4xl mb-4'>Previous Work</h2>
+        {/* <h2 className='text-4xl mb-4'>Previous Work</h2> */}
         <div>
           {projects.length > 0
             ? projects.map((project: any) => (
