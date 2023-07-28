@@ -1,5 +1,5 @@
 export const Socials: React.FC = () => (
-  <div className="flex mt-8">
+  <div className="flex mt-4">
     <a
       href='https://www.linkedin.com/in/rhysad/'
       target='none'
@@ -7,7 +7,7 @@ export const Socials: React.FC = () => (
       <span className='sr-only'>LinkedIn</span>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        className='h-10 w-10 mx-2'
+        className='h-8 w-8 mx-2'
         fill='currentColor'
         viewBox='0 0 24 24'
         aria-hidden='true'>
@@ -20,7 +20,7 @@ export const Socials: React.FC = () => (
       className=' hov'>
       <span className='sr-only'>GitHub</span>
       <svg
-        className='h-10 w-10 mx-2'
+        className='h-8 w-8 mx-2'
         fill='currentColor'
         viewBox='0 0 24 24'
         aria-hidden='true'>
@@ -37,7 +37,7 @@ export const Socials: React.FC = () => (
       className='hov'>
       <span className='sr-only'>Twitter</span>
       <svg
-        className='h-10 w-10 mx-2'
+        className='h-8 w-8 mx-2'
         fill='currentColor'
         viewBox='0 0 24 24'
         aria-hidden='true'>

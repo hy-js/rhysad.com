@@ -6,7 +6,7 @@ const Accent = () => {
 
   useEffect(() => {
     function generateHslColors() {
-      return setColor(`hsla(${~~(360 * Math.random())},50%,70%,0.8)`)
+      return setColor(`hsla(${~~(360 * Math.random())},50%,80%,0.8)`)
     }
     generateHslColors();
   }, [reload]);

@@ -46,7 +46,7 @@ export default function App() {
       </head>
       <body className='h-100 bg-orange-50'>
         <div>
-          <div className='max-w-3xl mx-auto animate-fade-in-up h-100 bg-orange-50'>
+          <div className='max-w-6xl mx-auto animate-fade-in-up h-100 bg-orange-50'>
             <main className='flex flex-col justify-center px-4 sm:px-6 md:px-8 mt-8 h-100 '>
               <Outlet />
             </main>
