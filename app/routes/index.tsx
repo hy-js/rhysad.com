@@ -3,7 +3,6 @@ import { Socials } from "~/components/Socials"
 import moment from "moment"
 import { json } from "@remix-run/node" // or cloudflare/deno
 import { useLoaderData } from "@remix-run/react"
-import { Link } from "@remix-run/react"
 
 export async function loader() {
   const res = await fetch(
