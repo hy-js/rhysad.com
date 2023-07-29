@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { NavLink } from "remix"
 import useScrollPosition from "~/hooks/useScrollPosition"
 
@@ -21,7 +20,7 @@ export default function Nav({}) {
         className={classNames(
           scrollPosition > 10 ? "shadow " : "shadow-none",
           classNames(
-            "z-50 transition-shadow  sticky top-0 flex flex-wrap items-center justify-between py-3"
+            "z-50 transition-shadow  sticky top-0 flex flex-wrap items-center justify-between py-3 bg-gray-100"
           )
         )}>
         <div className='container mx-auto flex flex-wrap items-center justify-between '>
