@@ -15,15 +15,15 @@ export async function loader() {
 }
 
 export default function About() {
-  const latestProjects = [
-    {
-      name: "cryptixle",
-      desc: "A Cryptic Crossword Wordle Game",
-      html_url: "https://github.com/hy-js/cryptixle"
-    }
-  ]
+  const latestProjects = useLoaderData()
+  // [
+  //   {
+  //     name: "cryptixle",
+  //     desc: "A Cryptic Crossword Wordle Game",
+  //     html_url: "https://github.com/hy-js/cryptixle"
+  //   }
+  // ]
 
-  // useLoaderData()
 
   const projects = [
     {
