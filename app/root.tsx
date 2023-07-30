@@ -38,6 +38,7 @@ export default function App() {
     ::selection {
       background: ${color};
     }
+
 `
   return (
     <html lang='en'>
