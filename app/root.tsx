@@ -50,7 +50,7 @@ export default function App() {
       <body className='h-100 bg-orange-50'>
         <div>
           <div className='max-w-7xl mx-auto animate-fade-in-up h-100 bg-orange-50'>
-            <main className='flex flex-col justify-center px-4 sm:px-6 md:px-8 mt-8 h-100 '>
+            <main className='flex flex-col justify-center px-4 sm:px-6 md:px-8 mt-4 h-100 '>
               <Header />
               <Outlet />
             </main>

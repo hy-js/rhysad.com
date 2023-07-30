@@ -24,7 +24,6 @@ export default function About() {
   //   }
   // ]
 
-
   const projects = [
     {
       name: "cryptixle",
@@ -51,58 +50,48 @@ export default function About() {
 
   return (
     <>
-      <section className='mb-4'>
-        <div>
-          {latestProjects.length > 0
-            ? latestProjects.map((project: any) => (
-                <div className='mb-10 border-b-2'>
-                  <a href={project.link} target='none'>
-                    <div className='rounded-lg card aspect-video'>
-                      <div className='text-3xl uppercase text-gray-400 italic flex flex-col justify-center items-center h-full'>
-                        coming soon
-                      </div>
+      <section>
+        {latestProjects.length > 0
+          ? latestProjects.map((project: any) => (
+              <div className='border-b-2 mb-4'>
+                <a href={project.link} target='none'>
+                  <div className='rounded-lg card aspect-video'>
+                    <div className='text-2xl uppercase text-gray-400 italic flex flex-col justify-center items-center h-full'>
+                      coming soon
                     </div>
-                    <div className='m-2'>
-                      <h2 className='text-5xl uppercase'>{project.name}</h2>
-                      <p className='text-2l'>
-                        {moment(project.pushed_at).fromNow()}
-                      </p>
-                      <h5 className='text-2l text-gray-400 '>{project.desc}</h5>
-                    </div>
-                  </a>
-                </div>
-              ))
-            : null}
-        </div>
+                  </div>
+                  <div className=''>
+                    <h2 className='text-4xl uppercase'>{project.name}</h2>
+                    <p>{moment(project.pushed_at).fromNow()}</p>
+                    <h5 className=' text-gray-400 '>Latest project</h5>
+                  </div>
+                </a>
+              </div>
+            ))
+          : null}
       </section>
 
-      <section className='mb-4'>
-        <div>
-          {projects.length > 0
-            ? projects.map((project: any) => (
-                <>
-                  <div className='mb-10 border-b-2'>
-                    <a href={project.link} target='none'>
-                      <div className='rounded-lg'>
-                        <img
-                          src={project.src}
-                          alt='image'
-                          className='rounded-lg bg-cover aspect-video'
-                        />
-                      </div>
-                      <div className='m-2'>
-                        <h2 className='text-5xl uppercase'>{project.name}</h2>
-                        <p className='text-2l'>{project.year}</p>
-                        <h5 className='text-2l text-gray-400 '>
-                          {project.desc}
-                        </h5>
-                      </div>
-                    </a>
+      <section>
+        {projects.length > 0
+          ? projects.map((project: any) => (
+              <div className='border-b-2 mb-4'>
+                <a href={project.link} target='none'>
+                  <div className='rounded-lg'>
+                    <img
+                      src={project.src}
+                      alt='image'
+                      className='rounded-lg bg-cover aspect-video'
+                    />
                   </div>
-                </>
-              ))
-            : null}
-        </div>
+                  <div className=''>
+                    <h2 className='text-4xl uppercase'>{project.name}</h2>
+                    <p>{project.year}</p>
+                    <h5 className=' text-gray-400 '>{project.desc}</h5>
+                  </div>
+                </a>
+              </div>
+            ))
+          : null}
       </section>
     </>
   )

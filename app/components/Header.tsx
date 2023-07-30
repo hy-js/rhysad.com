@@ -16,7 +16,7 @@ export default function Header({}) {
   ]
   return (
     <>
-      <header className='mb-2 border-b-2'>
+      <header className='border-b-2 mb-4'>
         <div className=' flex items-center justify-between'>
           <div className='flex items-center'>
             <h1 className='text-5xl italic font-vollkorn'>Rhys Dawson</h1>

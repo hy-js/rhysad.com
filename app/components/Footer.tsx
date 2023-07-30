@@ -3,7 +3,7 @@ import { Socials } from "~/components/Socials"
 export default function Footer({}) {
   return (
     <>
-      <footer className='pt-6 mt-4 flex justify-center gap-2 text-center text-sm print:hidden md:mt-20  bg-[#f6f6f6] border-t'>
+      <footer className='pt-2 mt-4 flex justify-center gap-2 text-center text-sm print:hidden  bg-[#f6f6f6] border-t'>
         <div>
           {/* <div className='flex justify-center'>
             <img alt='Me' className='rounded-full w-12 ' src='/profile.png' />
