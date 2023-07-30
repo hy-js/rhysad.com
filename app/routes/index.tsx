@@ -53,11 +53,11 @@ export default function About() {
       <section>
         {latestProjects.length > 0
           ? latestProjects.map((project: any) => (
-              <div className='border-b-2 mb-4'>
-                <a href={project.link} target='none'>
+              <a href={project.html_url} target='none'>
+                <div className='border-b-2 mb-4'>
                   <div className='rounded-lg card aspect-video'>
                     <div className='text-2xl uppercase text-gray-400 italic flex flex-col justify-center items-center h-full'>
-                      coming soon
+                      currently coding...
                     </div>
                   </div>
                   <div className=''>
@@ -65,8 +65,8 @@ export default function About() {
                     <p>{moment(project.pushed_at).fromNow()}</p>
                     <h5 className=' text-gray-400 '>Latest project</h5>
                   </div>
-                </a>
-              </div>
+                </div>
+              </a>
             ))
           : null}
       </section>

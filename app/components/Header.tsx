@@ -23,14 +23,15 @@ export default function Header({}) {
           </div>
           <Socials />
         </div>
-        <h2 className=''>Web Developer</h2>
-        <div className='flex flex-wrap gap-2 mt-2 mb-2'>
+        <h2 className='text-xl'>JavaScript Web Developer</h2>
+        <div className='flex flex-wrap gap-2 mb-2'>
+          <p className=''>Works with:</p>
           {techs.map((tech, i) => (
-            <button
-              className='rounded-md px-2 py-1 text-sm border border-gray-500 bg-white text-black'
+            <p
+              className='rounded-md px-2 py-1 text-sm  underline text-black'
               key={i}>
               {tech}
-            </button>
+            </p>
           ))}
         </div>
       </header>
