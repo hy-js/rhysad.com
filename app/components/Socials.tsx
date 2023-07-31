@@ -1,5 +1,5 @@
 export const Socials: React.FC = () => (
-  <div className="flex mt-4">
+  <div className="flex">
     <a
       href='https://www.linkedin.com/in/rhysad/'
       target='none'

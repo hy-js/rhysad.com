@@ -16,9 +16,9 @@ export default function Header({}) {
   ]
   return (
     <>
-      <header className='border-b-2 mb-4 p-2'>
-        <div className=' flex items-center justify-between'>
-          <div className='flex items-center '>
+      <header className='border-b-2 mb-4'>
+        <div className=' flex  justify-between'>
+          <div className='flex  flex-wrap '>
             <h1
               className='text-5xl italic font-vollkorn
              font-bold transition-all hover:-translate-y-[2px] md:block
@@ -29,19 +29,16 @@ export default function Header({}) {
           <Socials />
         </div>
 
-        <h2 className='text-xl  font-bold leading-tight'>
-          JavaScript Web Developer
-        </h2>
-        <div className='flex flex-wrap gap-2 mb-2'>
-          <p className=''>Works with:</p>
+        <h2 className='text-xl'>JavaScript Web Developer</h2>
+        {/* <div className='flex flex-wrap  mb-2'>
           {techs.map((tech, i) => (
             <p
-              className='rounded-md px-2 py-1 text-sm  underline text-black'
+              className='rounded-md px-1 text-sm  underline text-black'
               key={i}>
               {tech}
             </p>
           ))}
-        </div>
+        </div> */}
       </header>
     </>
   )
